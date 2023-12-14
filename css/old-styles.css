@@ -238,9 +238,6 @@ body {
   padding-bottom: 120px;
 }
 
-.second-section {
-  line-height: 1.2;
-}
 .company-header {
   color: #2e2f42;
   text-align: center;
@@ -292,7 +289,6 @@ body {
 /*=================> SECT3ON <======================*/
 .third-section {
   background: #f4f4fd;
-  line-height: 1.11;
 }
 .team-header {
   margin-bottom: 72px;
