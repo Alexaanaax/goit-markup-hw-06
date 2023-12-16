@@ -722,7 +722,6 @@ body {
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
-  width: 256px;
   margin-bottom: 16px;
 }
 .leave-from-field {
@@ -1008,7 +1007,13 @@ body {
     width: 264px;
   }
   /*=================> /TABLET FOOTER STYLES <======================*/
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px;
 }
+}
+
 
 /*=================> DESKTOP STYLES <======================*/
 @media screen and (min-width: 1158px) {
