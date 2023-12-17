@@ -60,7 +60,6 @@ body {
   margin: 0 auto;
 }
 .page-header {
-  padding: 15px;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -180,6 +179,7 @@ body {
     margin-left: auto;
   }
   .mobile-menu-wrapper {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -194,13 +194,14 @@ body {
     transform: translateX(0%);
   }
   .mobil-container {
-    padding: 72px 16px;
+    display: flex;
+    flex-direction: column;
     position: relative;
   }
   .mobile-menu-close-btn {
     position: absolute;
     top: 24px;
-    right: 16px;
+    right: 24px;
     padding: 0;
     line-height: 0;
     display: flex;
@@ -222,6 +223,7 @@ body {
   .mobile-menu {
     display: flex;
     flex-direction: column;
+    padding-top: 72px;
     align-items: flex-start;
     gap: 40px;
   }
@@ -240,11 +242,15 @@ body {
     color: #404bbf;
   }
   .address-mobile {
-    margin-top: 128px;
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
   .address-mobile-item {
-    margin-bottom: 24px;
+    width: calc((100%-24px) / 2);
+  }
+  .address-div-mobile-menu {
+    margin-top: auto;
   }
   .mobile-address-link {
     color: #434455;
@@ -264,6 +270,7 @@ body {
     display: flex;
     gap: 40px;
     margin-top: 48px;
+    margin-bottom: 40px;
   }
   .mobile-link-icons {
     display: flex;
@@ -521,7 +528,7 @@ body {
   padding-bottom: 96px;
 }
 .logo-footer {
-  display:block;
+  display: block;
   justify-content: center;
   text-align: center;
   margin-bottom: 16px;
@@ -603,13 +610,11 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
 .form {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
 .form-input {
   width: 288px;
   height: 40px;
@@ -895,7 +900,6 @@ body {
   /*=================> TABLET FIRST STYLES <======================*/
   .first-section {
     background-image: linear-gradient(
-        to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
@@ -973,8 +977,8 @@ body {
 
   /*=================> TABLET FOOTER STYLES <======================*/
   .footer {
-  padding-top: 96px;
-  padding-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .footer-container {
     flex-direction: row;
@@ -992,10 +996,10 @@ body {
     text-align: left;
   }
   .footer-text {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
   .footer-social {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
   .subscribe-text {
     display: block;
@@ -1007,15 +1011,17 @@ body {
     width: 264px;
   }
   /*=================> /TABLET FOOTER STYLES <======================*/
+
+  /*=================> TABLET MODAL STYLES <======================*/
   .modal {
     width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px;
+  }
 }
-}
+/*=================> /TABLET MODAL STYLES <======================*/
 
-
-/*=================> DESKTOP STYLES <======================*/
+/*=================> DESKTOP HEADER STYLES <======================*/
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -1039,4 +1045,161 @@ body {
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /*=================> /DESKTOP HEADER STYLES <======================*/
+
+  /*=================> DESKTOP FIRST STYLES <======================*/
+  .first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Background/bg-desktop.jpg);
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  @media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+    screen and (min-resolution: 2dppx) and (min-width: 1158px),
+    screen and (min-device-pixel-ratio: 2) and (min-width: 11588px) {
+    .first-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Background/bg-desktop@2x.jpg);
+    }
+  }
+  .main-heading {
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+  /*=================> /DESKTOP FIRST STYLES <======================*/
+
+  /*=================> DESKTOP SECOND STYLES <======================*/
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .company-menu {
+    gap: 24px;
+  }
+  .company-list {
+    width: calc((100% - 72px) / 4);
+  }
+  .icon-box {
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background-color: #f4f4fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .company-list {
+    width: 264px;
+    flex-basis: auto;
+  }
+  .company-menu {
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .company-text-title {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    /* 120% */
+    letter-spacing: 0.02em;
+  }
+  .company-text {
+    color: #434455;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  /*=================> /DESKTOP SECOND STYLES <======================*/
+
+  /*=================> DESKTOP THIRD STYLES <======================*/
+  .team-menu {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 24px;
+  }
+  .team-list {
+    width: 100%;
+  }
+  .third-cont {
+    width: 100%;
+  }
+  /*=================> /DESKTOP THIRD STYLES <======================*/
+
+  /*=================> DESKTOP FOURTH STYLES <======================*/
+  .portfolio-menu {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-list {
+    width: calc((100% - 48px) / 3);
+    border-top: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-list:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+  .hidden-port {
+    position: relative;
+    overflow: hidden;
+  }
+  .overlay-port {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    overflow: auto;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-list:hover .overlay-port {
+    transform: translateY(0%);
+  }
+  /*=================> /DESKTOP FOURTH STYLES <======================*/
+
+  /*=================> DESKTOP FOOTER STYLES <======================*/
+  .footer-container {
+    width: 1158px;
+  }
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .logo-footer {
+    margin-right: 120px;
+  }
+  .form-container {
+    margin-left: 80px;
+  }
+  .form-input {
+    width: 264px;
+  }
+   /*=================> /DESKTOP FOOTER STYLES <======================*/
 }
